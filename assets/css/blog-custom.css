@@ -1,0 +1,597 @@
+/* ==========================================================================
+   C2Z Dark Blog Theme
+   ========================================================================== */
+
+/* ===== Base & Global Layout ===== */
+html,
+body {
+    background: #111;
+}
+
+body {
+    color: #e5e5e5;
+}
+
+.wrapper {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.page-content {
+    background: #111;
+}
+
+/* ===== Typography & Links ===== */
+h1, h2, h3, h4, h5, h6,
+.post-title,
+.post-link {
+    color: #fff;
+}
+
+a,
+a:visited {
+    color: #58a6ff;
+}
+
+a:hover {
+    color: #79b8ff;
+    text-decoration: underline;
+}
+
+.post-meta,
+.post-item time,
+.post-list-item time {
+    color: #888;
+}
+
+.post-item time {
+    font-size: 0.9rem;
+}
+
+.post-list-item time {
+    font-size: 0.85rem;
+}
+
+blockquote {
+    color: #aaa;
+    border-left-color: #444;
+}
+
+/* ===== Header & Navigation ===== */
+.site-header {
+    background: #111;
+    border-top: 0;
+    border-bottom: 1px solid #333;
+    padding: 0;
+    min-height: auto !important;
+}
+
+.site-header .wrapper {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 12px 20px !important;
+    min-height: auto !important;
+}
+
+.site-header .site-nav {
+    float: none !important;
+    position: static !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+    background: transparent !important;
+    border: none !important;
+    line-height: 1 !important;
+}
+
+.site-header .site-nav .page-link {
+    margin-left: 0 !important;
+    padding: 0 !important;
+    color: #e5e5e5 !important;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1 !important;
+}
+
+.site-header .site-nav .page-link:hover {
+    color: #fff !important;
+}
+
+/* Search Container */
+.header-search-container {
+    position: relative;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+/* ซ่อนปุ่ม Toggle แว่นขยายบนหน้าจอคอม */
+#search-toggle-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #ccc;
+    cursor: pointer;
+    padding: 6px;
+    align-items: center;
+    justify-content: center;
+}
+
+#search-toggle-btn:hover {
+    color: #fff;
+}
+
+#header-search-input {
+    background: #111;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 13px;
+    line-height: 1.2;
+    outline: none;
+    width: 160px; /* ขนาดคงที่บน desktop */
+    box-sizing: border-box;
+}
+
+#header-search-input:focus {
+    border-color: #555;
+    background: #1a1a1a;
+}
+
+/* Search Dropdown */
+.search-results-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 260px;
+    max-height: 280px;
+    margin-top: 8px;
+    background: #181818;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow-y: auto;
+    z-index: 100;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+.search-results-dropdown a {
+    display: block;
+    padding: 10px 14px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 1.4;
+    border-bottom: 1px solid #222;
+}
+
+.search-results-dropdown a:last-child {
+    border-bottom: none;
+}
+
+.search-results-dropdown a:hover {
+    background: #252525;
+    color: #fff;
+}
+
+.search-results-dropdown .no-result {
+    padding: 12px 14px;
+    color: #777;
+    font-size: 13px;
+}
+
+/* ===== Posts & Listings ===== */
+.post-item {
+    margin-bottom: 30px;
+}
+
+.post-item h2 {
+    margin-bottom: 5px;
+}
+
+.post-item h2 a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+.post-item h2 a:hover {
+    color: #79b8ff;
+    text-decoration: underline;
+}
+
+.post-list-item {
+    padding: 0 0 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #333;
+}
+
+.post-list-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.post-list-item h2 {
+    margin: 0 0 8px;
+}
+
+.post-list-item h2 a {
+    text-decoration: none;
+}
+
+/* ===== Post Layout & Sidebar ===== */
+.post-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 900px) 240px;
+    gap: 40px;
+    align-items: start;
+}
+
+.post-main,
+.post-sidebar {
+    min-width: 0;
+}
+
+.post-sidebar {
+    height: 100%;
+}
+
+.post-sidebar-fixed {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 30px;
+    z-index: 10;
+}
+
+.post-sidebar-section {
+    margin-bottom: 40px;
+    padding-left: 16px;
+    border-left: 1px solid #333;
+}
+
+.post-sidebar-section h3 {
+    margin: 0 0 16px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.post-sidebar-section ul,
+.recent-posts {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.post-sidebar-section li,
+.recent-posts li {
+    margin-bottom: 12px;
+}
+
+.post-sidebar-section a,
+.post-toc a {
+    color: #777;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.post-sidebar-section a:hover,
+.post-toc a:hover {
+    color: #aaa;
+}
+
+/* Sidebar Tags */
+.sidebar-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.sidebar-tag {
+    display: inline-block;
+    padding: 5px 9px;
+    border: 1px solid #333;
+    border-radius: 999px;
+    color: #777 !important;
+    font-size: 12px !important;
+    line-height: 1.2 !important;
+    text-decoration: none;
+}
+
+.sidebar-tag:hover {
+    border-color: #555;
+    color: #aaa !important;
+}
+
+/* Post TOC */
+.post-toc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.post-toc a {
+    display: block;
+}
+
+/* ===== Tables ===== */
+table {
+    color: #ddd;
+    border-color: #333;
+}
+
+table tr:nth-child(even) {
+    background: #181818;
+}
+
+table th {
+    background: #222;
+    border-color: #333;
+}
+
+table td {
+    border-color: #333;
+}
+
+/* ===== Code Components ===== */
+pre,
+code {
+    background: #181818;
+    border-color: #333;
+    color: #e5e5e5;
+}
+
+.highlighter-rouge .highlight,
+.highlight {
+    background: #181818;
+}
+
+/* Custom Code Window */
+.code-window {
+    margin: 24px 0;
+    background: #151515;
+    border: 1px solid #333;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.code-header {
+    height: 46px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 16px;
+    background: #151515;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.code-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.code-dots span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #444;
+}
+
+.code-language {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #777;
+    font-size: 13px;
+    font-family: system-ui, sans-serif;
+}
+
+.code-copy {
+    margin-left: auto;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #777;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.code-copy:hover {
+    color: #ccc;
+}
+
+.code-content {
+    display: flex;
+    width: 100%;
+    background: #151515;
+    overflow-x: auto;
+}
+
+.code-line-numbers {
+    flex-shrink: 0;
+    padding: 18px 12px 18px 20px;
+    text-align: right;
+    user-select: none;
+    color: #666;
+    font-family: "Cascadia Code", "JetBrains Mono", Consolas, monospace;
+    font-size: 14px;
+    line-height: 1.65;
+    border-right: 1px solid #292929;
+}
+
+.code-content .highlight {
+    flex: 1;
+    min-width: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.code-content .highlight pre {
+    margin: 0 !important;
+    padding: 18px 20px !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+}
+
+.code-content .highlight code {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    font-family: "Cascadia Code", "JetBrains Mono", Consolas, monospace;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+    border-top: 1px solid #333;
+    padding: 24px 0;
+    background: #111;
+}
+
+.site-footer .wrapper {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.site-footer .footer-col-wrapper,
+.site-footer p {
+    color: #888;
+    font-size: 13px;
+}
+
+.site-footer .footer-col-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-footer p {
+    margin: 0;
+    text-align: center;
+}
+
+/* ===== Back to Top Button ===== */
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #181818;
+    color: #ccc;
+    border: 1px solid #333;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.2s ease-in-out;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#back-to-top:hover {
+    background: #222;
+    color: #fff;
+    border-color: #555;
+}
+
+/* ===== Responsive Styles ===== */
+@media screen and (max-width: 900px) {
+    .post-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .post-sidebar-fixed {
+        position: static;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /* ล็อคความสูง Header ให้เท่าเดิมเสมอ ป้องกัน Header หดตัว */
+    .site-header .wrapper {
+        position: relative !important;
+        min-height: 48px !important;
+        box-sizing: border-box !important;
+    }
+
+    .site-nav {
+        background: #181818;
+        border: 1px solid #333;
+    }
+
+    .site-nav .page-link {
+        color: #e5e5e5;
+    }
+
+    /* แสดงปุ่มแว่นขยายเฉพาะบนมือถือ */
+    #search-toggle-btn {
+        display: flex !important;
+    }
+
+    /* ซ่อนช่องค้นหาปกติในหน้าจอมือถือ */
+    #header-search-input {
+        display: none;
+    }
+
+    /* โครงสร้างคอนเทนเนอร์ค้นหา */
+    .header-search-container {
+        position: static;
+    }
+
+    /* เมื่อกดเปิดช่องค้นหาบนมือถือ (.active) ให้ขยายทับพื้นที่ Header ทั้งหมด */
+    .header-search-container.active {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #111;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        z-index: 100;
+    }
+
+    /* ปรับช่อง Input ให้ขยายเต็มความกว้าง */
+    .header-search-container.active #header-search-input {
+        display: block !important;
+        width: 100% !important;
+        height: 36px;
+        background: #1a1a1a;
+        box-sizing: border-box;
+    }
+
+    /* จัดตำแหน่ง Dropdown ผลลัพธ์การค้นหา */
+    .header-search-container.active .search-results-dropdown {
+        position: absolute;
+        top: 100%;
+        left: 20px;
+        right: 20px;
+        width: auto;
+        margin-top: 4px;
+    }
+}

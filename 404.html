@@ -1,3 +1,41 @@
 ---
-layout: 404
+layout: null
+title: ไม่พบหน้านี้
 ---
+
+<!DOCTYPE html>
+<html class="theme-dark" lang="th">
+
+{% include head.html %}
+
+<body>
+
+  <div class="container">
+    <div class="column">
+      <main>
+
+        <!-- Replace with your name or brand -->
+        <h1>ไม่พบหน้านี้</h1>
+
+        <!-- Add a short description about yourself or your brand -->
+        <p>ไซต์ที่กําหนดค่าตามที่อยู่นี้ไม่มีไฟล์ที่ร้องขอ</p>
+
+        <!-- All your buttons go here -->
+        <nav class="button-stack" aria-label="Links">
+
+          <!-- Default -->
+          <a class="button button-default" href="{{site.url}}" rel="noopener" role="button">
+            <img class="icon" aria-hidden="true" src="assets/images/icon-new/back.svg" alt="Back Icon" />ย้อนกลับ</a>
+
+        </nav>
+
+      </main>
+
+      {% include footer.html %}
+
+    </div>
+  </div>
+
+</body>
+
+</html>

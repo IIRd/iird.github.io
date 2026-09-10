@@ -1,111 +1,114 @@
-<div class="container">
-  <div class="column">
-    <img class="avatar avatar--soft" src="{{site.url}}/images/avatar.png" srcset="{{site.url}}/images/avatar@2x.png"
-      alt="{{site.username}}" />
-    <!-- <h1><div>{{site.main_title}}</div></h1> -->
-    <p>{{site.main_description}}</p>
+<header class="site-header" role="banner">
 
-    <!-- All your buttons go here -->
-    <div class="button-stack" role="navigation">
-      <!-- YouTube -->
-      <a class="button button-yt" href="https://www.youtube.com/@2RD.Channel" target="_blank" rel="noopener"
-        role="button"><img class="icon" aria-hidden="true" src="{{site.url}}/images/icons/youtube.svg"
-          alt="YouTube Logo" />YouTube</a>
+    <div class="wrapper site-header-wrapper">
 
-      <!-- TikTok -->
-      <a class="button button-tiktok" href="https://www.tiktok.com/@2rd.channel" target="_blank" rel="noopener"
-        role="button"><img class="icon" aria-hidden="true" src="{{site.url}}/images/icons/tiktok.svg"
-          alt="TikTok Logo" />TikTok</a>
+        <!-- ฝั่งซ้าย: เมนูนำทาง -->
+        <nav class="site-nav">
+            <a class="page-link" href="{{ "/" | relative_url }}">Home</a>
+            <a class="page-link" href="{{ "/blog/" | relative_url }}">Blog</a>
+            <a class="page-link" href="{{ "/tags/" | relative_url }}">Tags</a>
+            <a class="page-link" href="{{ "/about/" | relative_url }}">About</a>
+        </nav>
 
-      <!-- Twitch 
-      <a class="button button-twitch" href="https://www.twitch.tv/2rd_" target="_blank" rel="noopener"
-        role="button"><img class="icon" aria-hidden="true" src="{{site.url}}/images/icons/twitch.svg"
-          alt="Twitch Logo" />Twitch</a>-->
-
-      <!-- Facebook -->
-      <a class="button button-faceb" href="https://www.facebook.com/2RD.Channel" target="_blank" rel="noopener"
-        role="button"><img class="icon" aria-hidden="true" src="{{site.url}}/images/icons/facebook.svg"
-          alt="Facebook Logo" />Facebook</a>
-
-      <!-- Bluesky -->
-      <a class="button button-bluesky" href="https://bsky.app/profile/2rd.top" target="_blank" rel="noopener"
-        role="button"><img class="icon" aria-hidden="true" src="{{site.url}}/images/icons/bluesky.svg"
-          alt="Bluesky Logo" />Bluesky</a>
-
-      <!-- Steam Alt
-      <a class="button button-steam-alt" href="https://steamcommunity.com/id/2GB/" target="_blank" rel="noopener"
-        role="button"><img class="icon" aria-hidden="true" src="{{site.url}}/images/icons/steam.svg"
-          alt="Steam Logo" />Steam</a> -->
-
-      <p class="line"><i class="fa-solid fa-puzzle-piece"></i> ดาวน์โหลดม็อด</p>
-
-      <!-- ม็อดมายคราฟ -->
-      <a class="button button-ม็อดมายคราฟ" href="/mcpe" target="_top" rel="noopener" role="button"><img class="icon"
-          aria-hidden="true" src="{{site.url}}/images/icons/minecraft.svg" alt="ม็อดมายคราฟ icon" />Minecraft
-        Bedrock</a>
-
-      <!-- Hytale -->
-      <a class="button button-hytale" href="/hytale" target="_top" rel="noopener" role="button"><img class="icon"
-          aria-hidden="true" src="{{site.url}}/images/icons/Hytale.png" alt="Hytale icon">Hytale</a>
-
-      <!-- Planet Coaster -->
-      <div class="slide-container" data-continue-url="{{site.url}}/download/other/Thai_by_2RD_D04.03.22_T02.48.zip">
-        <a class="button button-planet-coaster sensitive-trigger" href="javascript:void(0)" download>
-          <img class="icon" aria-hidden="true" src="{{site.url}}/images/icons/Planet_Coaster.png"
-            alt="Planet Coaster icon" />Planet Coaster</a>
-        <div class="sensitive-panel">
-          <div class="sensitive-panel__content">
-            <p>ภาษาไทยเกม แพลเน็ตโคสเตอร์</p>
-            <div>
-              <a class="button button-sensitive-yt"
-                href="https://steamcommunity.com/sharedfiles/filedetails/?id=2363451182" target="_blank" rel="noopener"
-                role="button">
-                <img class="icon" aria-hidden="true" src="{{site.url}}/images/icons/steam.svg"
-                  alt="YouTube Logo" />วิธีติดตั่งภาษาไทย</a>
-            </div>
-            <button class="button button-sensitive sensitive-continue">
-              ดาวน์โหลด
+        <!-- ฝั่งขวา: กล่องค้นหา -->
+        <div class="header-search-container">
+            <button id="search-toggle-btn" aria-label="Toggle Search">
+                <!-- ไอคอนแว่นขยาย -->
+                <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <!-- ไอคอนปิด (X) -->
+                <svg class="close-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" style="display: none;">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
             </button>
-          </div>
-        </div>
-      </div>
 
-      <!-- Crysis 2 Remastered -->
-      <div class="slide-container"
-        data-continue-url="https://drive.google.com/file/d/1TVYa-4JLiuKxJUTRV-etg0LU2VM6rYOU/view">
-        <a class="button button-crysis-2-remastered sensitive-trigger" href="javascript:void(0)" download>
-          <img class="icon" aria-hidden="true" src="{{site.url}}/images/icons/Crysis2Remastered.png"
-            alt="Crysis 2 Remastered icon" />
-          Crysis 2 Remastered</a>
-        <div class="sensitive-panel">
-          <div class="sensitive-panel__content">
-            <p>ภาษาไทยเกม ครายซิส 2 รีมาสเตอร์</p>
-            <div>
-              <a class="button button-sensitive-yt"
-                href="https://steamcommunity.com/sharedfiles/filedetails/?id=2890322484" target="_blank" rel="noopener"
-                role="button">
-                <img class="icon" aria-hidden="true" src="{{site.url}}/images/icons/steam.svg"
-                  alt="YouTube Logo" />วิธีติดตั่งภาษาไทย</a>
-            </div>
-            <button class="button button-sensitive sensitive-continue">
-              ดาวน์โหลด
-            </button>
-          </div>
+            <input type="text" id="header-search-input" placeholder="Search..." autocomplete="off">
+            <div id="header-search-results" class="search-results-dropdown"></div>
         </div>
 
-      </div>
-
-      <p class="line"><i class="fa-solid fa-address-card"></i> ติดต่อ</p>
-
-      <!-- Generic Email -->
-      <a class="button button-email-2" href="mailto:{{site.email}}?subject=สวัสดีครับ!" target="_blank" rel="noopener"
-        role="button"><img class="icon" aria-hidden="true" src="{{site.url}}/images/icons/generic-email.svg"
-          alt="Email Icon" />{{site.email}}</a>
     </div>
 
-    <footer>
-      {{ site.footer | replace: 'URL_PLACEHOLDER', site.url | replace:
-      'USER_PLACEHOLDER', site.username }}
-    </footer>
-  </div>
-</div>
+</header>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. ระบบค้นหา (Search Logic)
+    const input = document.getElementById("header-search-input");
+    const resultsContainer = document.getElementById("header-search-results");
+
+    if (input && resultsContainer) {
+        const posts = [
+            {% for post in site.posts %}
+            {
+                title: {{ post.title | jsonify }},
+                url: {{ post.url | relative_url | jsonify }},
+                tags: {{ post.tags | jsonify }}
+            }{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+        ];
+
+        input.addEventListener("input", (e) => {
+            const query = e.target.value.trim().toLowerCase();
+            resultsContainer.innerHTML = "";
+
+            if (!query) {
+                resultsContainer.style.display = "none";
+                return;
+            }
+
+            const matchedPosts = posts.filter(p => {
+                const matchTitle = p.title ? p.title.toLowerCase().includes(query) : false;
+                const matchTag = Array.isArray(p.tags) && p.tags.some(tag => tag.toLowerCase().includes(query));
+                return matchTitle || matchTag;
+            });
+
+            if (matchedPosts.length > 0) {
+                matchedPosts.forEach(post => {
+                    const link = document.createElement("a");
+                    link.href = post.url;
+
+                    const tagsText = Array.isArray(post.tags) && post.tags.length > 0
+                        ? `<br><small style="color: #777; font-size: 11px;">🏷️ ${post.tags.join(', ')}</small>`
+                        : '';
+
+                    link.innerHTML = `${post.title}${tagsText}`;
+                    resultsContainer.appendChild(link);
+                });
+            } else {
+                resultsContainer.innerHTML = `<div class="no-result">ไม่พบบทความหรือแท็กนี้</div>`;
+            }
+
+            resultsContainer.style.display = "block";
+        });
+    }
+
+    // 2. ระบบ Toggle ปุ่มค้นหาบนมือถือ (Mobile Toggle Logic)
+    const searchContainer = document.querySelector(".header-search-container");
+    const searchBtn = document.getElementById("search-toggle-btn");
+
+    if (searchBtn && searchContainer) {
+        searchBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            searchContainer.classList.toggle("active");
+            if (searchContainer.classList.contains("active") && input) {
+                input.focus();
+            }
+        });
+    }
+
+    // 3. ปิด Dropdown และซ่อนช่องค้นหาเมื่อคลิกนอกพื้นที่
+    document.addEventListener("click", (e) => {
+        if (searchContainer && !searchContainer.contains(e.target)) {
+            searchContainer.classList.remove("active");
+            if (resultsContainer) {
+                resultsContainer.style.display = "none";
+            }
+        }
+    });
+});
+</script>
