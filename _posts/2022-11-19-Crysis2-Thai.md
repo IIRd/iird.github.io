@@ -22,7 +22,7 @@ tags: [Crysis 2 Remastered, Mods, Guide]
 ---
 
 ## ⬇️ ดาวน์โหลด
-ลิงค์: [https://2rd.top/](https://drive.google.com/file/d/1TVYa-4JLiuKxJUTRV-etg0LU2VM6rYOU/view)
+ลิงค์: [https://drive.google.com/file/d/1TVYa-4JLiuKxJUTRV-etg0LU2VM6rYOU/view](https://drive.google.com/file/d/1TVYa-4JLiuKxJUTRV-etg0LU2VM6rYOU/view)
 
 ---
 
