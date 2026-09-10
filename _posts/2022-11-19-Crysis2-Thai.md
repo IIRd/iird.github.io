@@ -13,7 +13,7 @@ tags: [Crysis 2 Remastered, Mods, Guide]
 ---
 
 ## 📝 ตัวอย่าง
-<div class="image-gallery">
+<div class="img-g">
   <img src="/assets/images/post/crysis2_01.jpg" alt="001">
   <img src="/assets/images/post/crysis2_02.jpg" alt="002">
   <img src="/assets/images/post/crysis2_03.jpg" alt="003">

@@ -607,27 +607,7 @@ code {
   height: 100%;
   display: block;
   border: 0;
-}
-
-.image-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* แบ่งเป็น 2 คอลัมน์ */
-  gap: 10px; /* ระยะห่างระหว่างรูป */
-  margin: 1.5rem 0;
-}
-
-/* บังคับให้รูปภาพแรกขยายเต็ม 2 คอลัมน์ (แถวบนสุด) */
-.image-gallery img:nth-child(1) {
-  grid-column: span 2;
-  width: 100%;
-}
-
-/* ปรับรูปที่เหลือให้เต็มช่อง */
-.image-gallery img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 6px; /* (Optional) เพิ่มมุมโค้ง */
+  border-radius: 6px;
 }
 
 /* ปรับให้ฉากหลังและรูปที่ซูมอยู่เหนือทุกเลเยอร์ของเว็บไซต์ */
@@ -637,4 +617,45 @@ code {
 
 .medium-zoom-image--opened {
   z-index: 100000 !important;
+}
+
+/* รูปภาพขนาดเต็ม 100% */
+img.s100 {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+/* รูปภาพขนาด 50% แสดงผลต่อกันในบรรทัดเดียวกัน */
+img.s50 {
+  width: calc(50% - 5px); /* หักออก 5px เพื่อเผื่อระยะห่างตรงกลาง */
+  max-width: 50%;
+  height: auto;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+.img-g {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px; /* ระยะห่างระหว่างรูป */
+  margin: 1rem 0;
+}
+
+/* รูปแรกขยายเต็ม 2 คอลัมน์ (แถวบน) */
+.img-g img:first-child {
+  grid-column: span 2;
+}
+
+/* ปรับรูปทุกรูปให้อยู่ในช่องพอดี */
+.img-g img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px; /* (Optional) ทำมุมโค้ง */
 }
